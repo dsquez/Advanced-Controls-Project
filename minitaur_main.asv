@@ -1,0 +1,6 @@
+% minitaur main.m
+
+tspan = [ 0 5 ];
+x0 = [0 0 0 0];
+params.theta0
+[tout, yout] = ode45(@minitaur_leg_eom,tspan,x0);
