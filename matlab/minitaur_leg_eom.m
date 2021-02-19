@@ -14,16 +14,15 @@ g = params.g;
 k = params.k;
 m = params.m;
 
-theta_z = @(x) acos((x^2 + lambda_1^2 - lambda_2^2)...
-    / (2*lambda_1*x));
+theta_z = params.theta_z;
 
 
 
 zeta_0 = params.zeta_0;
 
 dy(1) = x(2);
-dy(2) = x(1)*x(4)^2 - g*cos(x(3)) + ...
-    (k/m)...
+dy(2) = x(1)*x(4)^2 - g*cos(x(3))...
+    + (k/m)...
     *dthetadzeta(x(1),params)...
     *(theta_z(zeta_0) - theta_z(x(1)));
 dy(3) = x(4);

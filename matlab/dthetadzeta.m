@@ -9,7 +9,7 @@ du = ((2*lambda_1*zeta)*(2*zeta) ...
     - (zeta^2 + lambda_1^2 - lambda_2^2)*(2*lambda_1))...
     / (2*lambda_1*zeta)^2;
 
-x = du/sqrt(1-u^2);
+x = -du/sqrt(1-u^2);
 
 end
 
