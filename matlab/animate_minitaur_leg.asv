@@ -9,8 +9,8 @@ for iter = 1:numel(data)
         l_anim = interp1(time,y(:,1),time_anim);
         psi_anim = interp1(time,y(:,3),time_anim);
         
-        x_stance_anim = l_anim.*sin(psi_anim)+params.stance(iter,1);
-        y_stance_anim = l_anim.*cos(psi_anim)+params.stance(iter,2);
+        x_stance_anim = l_anim.*sin(psi_anim);
+        y_stance_anim = l_anim.*cos(psi_anim);
         
         for jiter = 1:numel(time_anim)
             clf
@@ -22,8 +22,8 @@ for iter = 1:numel(data)
                 y_stance_anim(jiter),...
                 'ro')
             hold off
-            axis equal
-            axis([-0.5 1 -0.1 0.5])
+%             axis equal
+%             axis([-0.5 1 0 0.5])
             pause(1/FPS)
             
         end
@@ -40,8 +40,8 @@ for iter = 1:numel(data)
                 y_anim(jiter),...
                 'ro')
             hold off
-            axis equal
-            axis([-0.5 1 -0.1 0.5])
+%             axis equal
+            axis([-0.5 1 0 0.5])
             pause(1/FPS)
             
         end
