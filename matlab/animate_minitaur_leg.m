@@ -10,7 +10,7 @@ for iter = 1:numel(data)
         psi_anim = interp1(time,y(:,3),time_anim);
         
         x_stance_anim = l_anim.*sin(psi_anim)+params.stance(iter,1);
-        y_stance_anim = l_anim.*cos(psi_anim)+params.stance(iter,2);
+        y_stance_anim = -l_anim.*cos(psi_anim)+params.stance(iter,2);
         
         for jiter = 1:numel(time_anim)
             clf
