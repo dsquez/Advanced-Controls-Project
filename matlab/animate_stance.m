@@ -16,7 +16,7 @@ for iter = 1:length(t_anim)
         [stance2(2) -r2_anim(iter)*cos(t2_anim(iter))],'b')
     
     hold off
-    axis equal
+%     axis equal
     axis([-0.4 0.4 -0.1 0.8])
     pause(1/FPS)
 end

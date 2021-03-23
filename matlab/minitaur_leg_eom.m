@@ -9,12 +9,12 @@ dy = zeros(length(x),1);
 
 lambda_1 = params.lambda_1;
 lambda_2 = params.lambda_2;
-theta_0 = params.theta_0;
+% theta_0 = params.theta_0;
 g = params.g;
 k = params.k;
 m = params.m;
 
-theta_z = params.theta_z;
+% theta_z = params.theta_z;
 
 
 
